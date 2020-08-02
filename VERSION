@@ -1,5 +1,8 @@
-DSPACE_VERSION=dspace-cris-5.8.0
+# dspace-5_x_x-cris is the most up-to-date github branch
+DSPACE_VERSION=dspace-5_x_x-cris
 DSPACE_VCS_URL=https://github.com/4science/dspace
+DOCKER_IMAGE_NAME=asanchez75/dspace-cris
+DOCKER_TAG=5.10.0
 #DSPACE_VCS_REF
 
 #MODS_VERSION

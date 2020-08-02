@@ -6,9 +6,9 @@ version: '3.3'
 networks:
   backend:
 
-volumes:
-  dspace: {}
-  postgres: {}
+#volumes:
+#  dspace: {}
+#  postgres: {}
 
 services:
   postgres:
@@ -16,10 +16,10 @@ services:
     networks:
       backend:
     volumes:
-      - postgres:/var/lib/postgresql/data
-
+#      - postgres:/var/lib/postgresql/data
+      - ./postgres:/var/lib/postgresql/data
   dspace:
-    image: 4science/dspace-cris:cris-5.8.0
+    image: asanchez75/dspace-cris:5.10.0
 #    build:
 #      context: ./
 #      dockerfile: Dockerfile
@@ -51,6 +51,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - dspace:/dspace
+#      -  dspace-cris:/dspace
+      -  ./dspace-cris:/dspace
     ports:
       - "8080:8080"
